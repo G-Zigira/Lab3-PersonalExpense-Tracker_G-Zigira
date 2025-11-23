@@ -39,25 +39,26 @@ This project is a command line Personal Expenseinance Tracker built in Python th
 
 ## Project files
 
-```
+
 expenses-tracker.py      =+ This file holds the main menu and does all the calculations
 archive_expenses.sh      =+ This file creates the archive directory and organises all the expenses
 balance.txt              =+ This file contains the current balance of the user 
-```
----
-## Project tree
 
-project directory/
+---
+## Project structure
+
+project/
 │
-│── expenses-tracker.py
-├── archive_expenses.sh        
+├── finance_tracker.py
+├── archive_expenses.sh
+│
+│
 ├── data/                     
-│     │── expenses_YYYY-MM-DD.txt
-│     │── balance.txt
-│
-└── archives/             
+│     └── expenses_YYYY-MM-DD.txt
+│     └── balance.txt
+└── archives/
       └── archive_log.txt
 
-## License 
+## License
 
-This is all open source and for educational purposes
+This is a free opnsource project for education and good grades
