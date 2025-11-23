@@ -212,12 +212,12 @@ def add_new_expense():
         print('the balance is insufficient therefore we cannot save the expense')
         return
 
-    # Save expense
+
     fname = DATA_DIR / f'expenses_{date_in}.txt'
     eid = next_id_for_file(fname)
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-    # Append CSV line
+
     try:
         with open(fname, 'a', newline='') as f:
             line = f'{eid},{timestamp},{item},{amt:.2f}\n'
@@ -226,7 +226,7 @@ def add_new_expense():
         print('we failed to save expense:', e)
         return
 
-    # Update balance (subtract expense)
+
     new_bal = available - amt
     write_balance(new_bal)
     print(f'The expense saved with ID {eid} the remaining balance is: {new_bal:.2f}')
@@ -266,12 +266,12 @@ def view_expenses_menu():
         print('\nVIEW EXPENSES')
         print('1. Search by item name')
         print('2. Search by amount')
-        print('3. Back to main menu')
-        choice = input('Choose an option: ').strip()
+        print('3. Go back to main menu')
+        choice = input('Choose an option from (1-3) : ').strip()
         if choice == '1':
-            q = input('Enter expense name to search (it will be case insensitive): ').strip()
+            q = input('Enter the expense name to search (it will be case insensitive): ').strip()
             if not q:
-                print('this segment cant be ')
+                print('this segment cant be empty please enter something')
                 continue
             res = search_by_item(q)
             if not res:
@@ -304,13 +304,13 @@ def main_menu():
     ensure_data_dir()
     while True:
         print('\n' + '*' * 48)
-        print('Welcome to Personal Finance Tracker')
+        print('Welcome to your Personal Expense Tracker')
         print('1. Check Remaining Balance')
         print('2. View Expenses')
         print('3. Add New Expense')
         print('4. Exit')
         print('*' * 48)
-        choice = input('Select an option (1-4): ').strip()
+        choice = input('Choose an option from (1-4): ').strip()
         if choice == '1':
             display_balance_report()
         elif choice == '2':
@@ -321,7 +321,7 @@ def main_menu():
             print('Saving and exiting , thanks and goodbye')
             sys.exit(0)
         else:
-            print('your selection was , please choose between  1 and 4.')
+            print('your selection was invalid , please choose between  1 and 4.')
 
 
 if __name__ == '__main__':

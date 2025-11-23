@@ -1,80 +1,63 @@
-Personal Finance Tracker
+# Personal Expenses Tracker
 
-This project is a command-line Personal Finance Tracker built in vanilla Python, along with a companion shell script for organizing and archiving expense files.
-It demonstrates practical use of file I/O, data structures, user input validation, and shell scripting for automation.
+This project is a command line Personal Expenseinance Tracker built in Python that has a companion shell script for organizing and archiving the expense files.
 
-Python Application (finance_tracker.py)
+---
 
-A menu based Personal Finance Tracker with the following features:
+## Features
 
-1. Check Remaining Balance
+1) The program allows the user to check their remaining balance
+2) Allows the user to view their expenses and the details of the said expenses
+3) The app allows user to add money to their expenses
+4) There app calculates the remaining balance after a new expense is added and the current balance before an expense is added
+5) The app performs monetary calculations of the users finances
+6) the app updates the balance after every succeful expense log
+6) The app allows the user to add new expenses and review and search for old expenses
+7) The app createes an archive directory where it stores expense and logs them by date
 
-Reads current balance from balance.txt
+---
 
-Shows:
+## How to run the app
 
-Current balance
+1) Make sure you have Python  installed in your device.
+2) Open the project folder in your terminal.
+3) Run:
 
-Total expenses
+   ```bash
+   python expenses-tracker.py
+   ```
+4) The app will automatically  start the menu.
 
-Available balance
+5) if you want to run the bash script end the pyhton program and run.
+6) Run:
 
-Allows adding more money to the balance
+   ```bash
+   ./ archive_expenses.sh
+   ```
 
-2. Add New Expense
+---
 
-Shows available balance before adding
+## Project files
 
-Takes:
+```
+expenses-tracker.py      =+ This file holds the main menu and does all the calculations
+archive_expenses.sh      =+ This file creates the archive directory and organises all the expenses
+balance.txt              =+ This file contains the current balance of the user 
+```
+---
+## Project tree
 
-Date (YYYY-MM-DD)
+project directory/
+│
+│── expenses-tracker.py
+├── archive_expenses.sh        
+├── data/                     
+│     │── expenses_YYYY-MM-DD.txt
+│     │── balance.txt
+│
+└── archives/             
+      └── archive_log.txt
 
-Item name
+## License 
 
-Amount spent
-
-Validates inputs and ID numbering
-
-Saves entry into:
-data/expenses_YYYY-MM-DD.txt
-
-Updates balance and confirms success
-
-3. View Expenses
-
-Search options:
-
-By item name
-
-By amount
-
-Return to main menu
-
-4. Exit
-
-Saves all data and closes the program.
-
-Shell Script (archive_expenses.sh)
-
-A small menu-driven script that manages archived expense files.
-
-Features
-
-Ensures archives/ directory exists
-
-Copies all expenses_*.txt files from data/ to archives/
-
-Logs every archive operation with timestamps in:
-archives/archive_log.txt
-
-Offers a search menu:
-
-Search for archived files using a date (YYYY-MM-DD)
-
-Prints file contents if found
-
-Running the Programs
-
-python3 finance_tracker.py
-
-./archive_expenses.sh
+This is all open source and for educational purposes
