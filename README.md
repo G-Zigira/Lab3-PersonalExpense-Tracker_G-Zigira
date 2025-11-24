@@ -47,9 +47,9 @@ balance.txt              =+ This file contains the current balance of the user
 ---
 ## Project structure
 
-project/
+main_dir/
 │
-├── finance_tracker.py
+├── expenses-tracker.py
 ├── archive_expenses.sh
 │
 ├── data/
@@ -58,7 +58,7 @@ project/
 │   ├── expenses_2024-11-08.txt
 │   └── ... (more daily expense files)
 │
-└── archives/         
+└── archives/
     ├── archive_log.txt
     ├── expenses_2024-11-07.txt
     ├── expenses_2024-11-08.txt
