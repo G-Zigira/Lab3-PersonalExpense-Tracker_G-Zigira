@@ -47,6 +47,7 @@ balance.txt              =+ This file contains the current balance of the user
 ---
 ## Project structure
 
+   ```bash
 main_dir/
 │
 ├── expenses-tracker.py
@@ -63,7 +64,7 @@ main_dir/
     ├── expenses_2024-11-07.txt
     ├── expenses_2024-11-08.txt
     └── ... (archived expense files)
-
+   ```
 
 ## License
 
