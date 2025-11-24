@@ -52,12 +52,18 @@ project/
 ├── finance_tracker.py
 ├── archive_expenses.sh
 │
+├── data/
+│   ├── balance.txt
+│   ├── expenses_2024-11-07.txt
+│   ├── expenses_2024-11-08.txt
+│   └── ... (more daily expense files)
 │
-├── data/                     
-│     └── expenses_YYYY-MM-DD.txt
-│     └── balance.txt
-└── archives/
-      └── archive_log.txt
+└── archives/         
+    ├── archive_log.txt
+    ├── expenses_2024-11-07.txt
+    ├── expenses_2024-11-08.txt
+    └── ... (archived expense files)
+
 
 ## License
 
